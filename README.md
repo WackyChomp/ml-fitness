@@ -1,10 +1,17 @@
 # ml-fitness
 
+<!--
+create virtual environment --- 	py -m venv ml-venv
+activate --- 	. ml-venv/Scripts/activate
+create requirements.txt --- pip freeze > requirements.txt
+-->
+
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center" id='readme-top'>
   <img src="https://www.icegif.com/wp-content/uploads/2023/06/icegif-296.gif" alt="Logo" target='blank' width="180" height="300" style='margin-left: 2rem'>
+  <img src="https://i.postimg.cc/fbxKmV6D/image-reversed.gif" alt="Logo" target='blank' width="180" height="300" style='margin-left: 2rem'>
 
   <h3 align="center">Finessing Fitness</h3>
 
