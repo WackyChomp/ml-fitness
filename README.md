@@ -4,6 +4,7 @@
 create virtual environment --- 	py -m venv ml-venv
 activate --- 	. ml-venv/Scripts/activate
 create requirements.txt --- pip freeze > requirements.txt
+install packages from requirements.txt --- pip install -r ./requirements.txt
 -->
 
 
