@@ -40,6 +40,23 @@ Here are the tools used:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments 🌟🤗🌟
+
+List of incredible resources that drive inspiration or point you into a direction:
+
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Img Shields](https://shields.io)
+<br><br>
+* [Python](https://www.python.org/)
+* [Pandas](https://pandas.pydata.org/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
