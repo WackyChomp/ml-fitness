@@ -17,7 +17,7 @@ install packages from requirements.txt --- pip install -r ./requirements.txt
   <h3 align="center">Finessing Fitness</h3>
 
   <p align="center">
-    Project your fitness goals with your own self metrics
+    Machine learning model classifing excercises and repetitions!
     <br />
     <br />
     <a href="https://github.com/WackyChomp/ml-fitness"><strong>Explore the docs »</strong></a>
@@ -29,3 +29,22 @@ install packages from requirements.txt --- pip install -r ./requirements.txt
     <a href="https://github.com/WackyChomp/ml-fitness/issues">Request Feature</a>
   </p>
 </div>
+
+
+## Built With
+Here are the tools used:
+
+* [![python][python]][python-url]
+* [![jupyter][jupyter]][jupyter-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[python]:https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white
+[python-url]:https://www.python.org/
+
+[jupyter]:https://img.shields.io/badge/Jupyter-20232A?style=for-the-badge&logo=jupyter&logoColor=orange
+[jupyter-url]:https://jupyter.org/

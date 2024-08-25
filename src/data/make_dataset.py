@@ -19,7 +19,7 @@ len(files)
 # see splits between '-' with --- f.split('-')
 
 data_path = '../../data/raw/MetaMotion'
-f = files[2]    # 1st dataset of the directory
+f = files[0]    # 1st dataset of the directory
 
 f.split('-')      # splitting the filename into list
 
@@ -53,9 +53,16 @@ for f in files:
     df['category'] = category
 
     if "Accelerometer":
+        df['set'] = acc_set
+        acc_set += 1
         acc_df = pd.concat([acc_df, df])
     if "Gyroscope" in f:
+        df['set'] = gyr_set
+        gyr_set += 1
         gyr_df = pd.concat([gyr_df, df])
+
+
+acc_df[acc_df['set'] == 2]         # Find specific set based on append increment
 
 # --------------------------------------------------------------
 # Datetimes conversion
