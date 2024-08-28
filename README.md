@@ -31,6 +31,16 @@ install packages from requirements.txt --- pip install -r ./requirements.txt
 </div>
 
 
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+
 ## Built With
 Here are the tools used:
 
