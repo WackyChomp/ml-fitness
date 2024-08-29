@@ -154,6 +154,38 @@ data_merged.columns = [
 #data_merged['label'].unique()
 #data_merged[data_merged['label'] == 'A']
 
+
+# --------------------------------------------------------------
+# Resample data based on frequency
+# Only shows rows based on frequency increments
+
+#data_merged[:1000].resample(rule='200ms').mean(numeric_only=True)
+
+#data_merged.columns
+
+# 'label', 'participant', 'category', 'set'
+
+sampling = {
+    "acc_x": "mean",
+    "acc_y": "mean",
+    "acc_z": "mean",
+    "gyr_x": "mean",
+    "gyr_y": "mean",
+    "gyr_z": "mean",
+    "label": "last",
+    "participant": "last",
+    "category": "last",
+    "set": "last",
+}
+
+#data_merged[:1000].resample(rule='200ms').apply(sampling)
+resampled_data_merged = data_merged[:1000].resample(rule='200ms').apply(sampling)
+
+days = [g for n, g in data_merged.groupby(pd.Grouper(freq='D'))]
+
+data_resampled = pd.concat([df.resample(rule='200ms').apply(sampling).dropna() for df in days])
+
+data_resampled.info()
 # --------------------------------------------------------------
 # Export dataset
 
