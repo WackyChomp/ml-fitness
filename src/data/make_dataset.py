@@ -183,9 +183,19 @@ resampled_data_merged = data_merged[:1000].resample(rule='200ms').apply(sampling
 
 days = [g for n, g in data_merged.groupby(pd.Grouper(freq='D'))]
 
-data_resampled = pd.concat([df.resample(rule='200ms').apply(sampling).dropna() for df in days])
+# Saving on computing resources and avoid potential crashes
+final_data_resampled = pd.concat([df.resample(rule='200ms').apply(sampling).dropna() for df in days])
 
-data_resampled.info()
+
+#final_data_resampled.head()
+
+final_data_resampled.info()
+
+# convert 'set' column from data type "float" to "int"
+final_data_resampled['set'] = final_data_resampled['set'].astype(int)
+
 # --------------------------------------------------------------
 # Export dataset
+# Pickle is ideal for timestamp
 
+final_data_resampled.to_pickle('../../data/interim/01_data_processed.pkl')

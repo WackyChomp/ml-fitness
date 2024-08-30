@@ -35,10 +35,31 @@ install packages from requirements.txt --- pip install -r ./requirements.txt
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#built-with">Built With</a></li>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
+
+
+
+## About The Project
+<p>When people exercise, they mostly care about the results of their discipline and hardwork. Others might find interest in the metrics and analytical aspect as well.
+<br>
+
+<u><b>Project Purpose / Expectations:</b></u>
+
+* Automating the workflow and analysis of exercise data that is recorded through device/app
+* Utilize Jupyter Notebook to execute code blocks independently and for collaboration
+* Creating data visualizations with <u>Matpotlib</u> to illustrate personalized insights
+</p>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 ## Built With
