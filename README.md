@@ -48,7 +48,9 @@ install packages from requirements.txt --- pip install -r ./requirements.txt
 
 
 ## About The Project
-<p>When people exercise, they mostly care about the results of their discipline and hardwork. Others might find interest in the metrics and analytical aspect as well.
+<p>When people exercise, they mostly care about the results of their discipline and hardwork. Others might find interest in the metrics and analytical component as well. This project showcases how you can identify patterns in your exercise routine and track whether your progress 
+is consistent or have anomalies. It is a great way to prevent poor forms which could lead to potential injuries. As always, there is no 
+downside to uncovering new ways to identify areas of improvement and build your ideal physique toward for self improvement
 <br>
 
 <u><b>Project Purpose / Expectations:</b></u>
@@ -83,6 +85,7 @@ List of incredible resources that drive inspiration or point you into a directio
 <br><br>
 * [Python](https://www.python.org/)
 * [Pandas](https://pandas.pydata.org/)
+* [Matplotlib](https://matplotlib.org/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

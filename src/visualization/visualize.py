@@ -19,6 +19,12 @@ plt.plot(df['acc_y'])
 plt.plot(set_df['acc_y'].reset_index(drop=True))      # reset index to show number of samples
 
 # --------------------------------------------------------------
+# MatPlotLib settings
+
+mpl.style.use('seaborn-v0_8-deep')
+mpl.rcParams['figure.figsize'] = (20,5)
+mpl.rcParams['figure.dpi'] = 100
+# --------------------------------------------------------------
 # Plot all exercise types
 
 #df['label'].unique()
@@ -39,8 +45,18 @@ for label in df['label'].unique():
 
 
 # --------------------------------------------------------------
-# Compare set types
+# Compare set types (medium vs. heavy)
 
+# query
+category_df = df.query("label == 'squat'").query("participant == 'A'").reset_index()
+
+
+# groupby plot
+fig, ax = plt.subplots()
+category_df.groupby(['category'])['acc_y'].plot()
+ax.set_xlabel('samples')
+ax.set_ylabel('acc_y')
+plt.legend()
 
 # --------------------------------------------------------------
 # Compare participants
