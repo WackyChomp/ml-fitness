@@ -19,7 +19,7 @@ plt.plot(df['acc_y'])
 plt.plot(set_df['acc_y'].reset_index(drop=True))      # reset index to show number of samples
 
 # --------------------------------------------------------------
-# MatPlotLib settings
+# MatPlotLib settings (establish settings in the beginning gets applied throughout)
 
 mpl.style.use('seaborn-v0_8-deep')
 mpl.rcParams['figure.figsize'] = (20,5)
@@ -60,12 +60,36 @@ plt.legend()
 
 # --------------------------------------------------------------
 # Compare participants
+  # Resetting index and sorting values will group 
+  # particpants properly and ensure consistent plotting
+
+
+#participant_df = df.query('label == "bench"').reset_index()
+#participant_df = df.query('label == "bench"').sort_values('participant')
+participant_df = df.query('label == "bench"').sort_values('participant').reset_index()
+
+
+fig, ax = plt.subplots()
+participant_df.groupby(['participant'])['acc_y'].plot()
+ax.set_xlabel('samples')
+ax.set_ylabel('acc_y')
+plt.legend()
 
 
 # --------------------------------------------------------------
 # Plot multiple axis
+# [[]] - converts to dataframe
+
+label = 'squat'
+participant = 'A'
+all_axis_df = df.query(f'label == "{label}"').query(f'participant == "{participant}"').reset_index()
 
 
+fig, ax = plt.subplots()
+all_axis_df[['acc_x', 'acc_y', 'acc_z']].plot(ax=ax)
+ax.set_xlabel('samples')
+ax.set_ylabel('acc_y')
+plt.legend()
 
 # --------------------------------------------------------------
 # Combine plots in one figure
