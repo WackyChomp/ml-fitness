@@ -77,7 +77,7 @@ plt.legend()
 
 
 # --------------------------------------------------------------
-# Plot multiple axis
+# Plot multiple axis of a single lable and participant
 # [[]] - converts to dataframe
 
 label = 'squat'
@@ -90,6 +90,30 @@ all_axis_df[['acc_x', 'acc_y', 'acc_z']].plot(ax=ax)
 ax.set_xlabel('samples')
 ax.set_ylabel('acc_y')
 plt.legend()
+
+
+# --------------------------------------------------------------
+# Plot all combinations for each lable/participant
+labels = df['label'].unique()
+participants = df['participant'].unique()     # notice that participant E is missing (revisit make_dataset.py)
+
+for label in labels:
+  for participant in participants:
+    all_axis_df = (
+      df.query(f'label == "{label}"')
+      .query(f'participant == "{participant}"')
+      .reset_index()
+    )
+
+    if len(all_axis_df) > 0:
+
+      fig, ax = plt.subplots()
+      all_axis_df[['acc_x', 'acc_y', 'acc_z']].plot(ax=ax)
+      ax.set_xlabel('samples')
+      ax.set_ylabel('acc_y')
+      plt.title('f{label} ({participant})'.title())
+      plt.legend()
+
 
 # --------------------------------------------------------------
 # Combine plots in one figure
